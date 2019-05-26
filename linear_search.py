@@ -8,7 +8,7 @@ myList = [1,7,6,5,8]
 print("Element in List :", myList)
 chosen = int(input("enter searching element:"))
 
-result = linear_search(availableDays,chosen)
+result = linear_search(myList,chosen)
 if result== None:
      print("Element not found in the list")
 else:
