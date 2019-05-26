@@ -1,17 +1,15 @@
-def linear_search(arr, n, x):
-    for i in range (0,n):
-        if (arr[i]==x):
+def linear_search(myList,item):
+    for i in range(len(myList)):
+        if myList[i]==item:
             return i
-        return -1
+    return None
 
-    array = [5,9,12,3]
-    x=19
-    solution=linear_search(arr, 0, len(array)-1, 19)
+myList = [1,7,6,5,8]
+print("Element in List :", myList)
+chosen = int(input("enter searching element:"))
 
-    if (solution== -1):
-        print ("This value is in index", solution);
-        
-    else:
-        print("This value is not in the array index")
-
-    return solution
+result = linear_search(availableDays,chosen)
+if result== None:
+     print("Element not found in the list")
+else:
+     print( "Element " + str(chosen) + " is found at position %d" %(result))
