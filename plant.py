@@ -47,7 +47,7 @@ class Plant:
         """
         self.nameDict = {}
 
-        with open('plants.txt', 'r') as f:
-            for line in f:
-                splitLine = line.split()
-                self.nameDict[str(splitLine[0])] = ",".join(splitLine[1:])
+        with open('plants.txt', 'r') as f:  # opens and reads text file
+            for line in f:  # iterates through each line in the file
+                splitLine = line.split()    # string -> list of individual string elements 
+                self.nameDict[str(splitLine[0])] = ",".join(splitLine[1:])  # adds the first element as a key to rest of joined str
